@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.age-caculator {
+    background-color: hsl(0, 0%, 100%);
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 20px;
+    border-bottom-right-radius: 100px;
+    width: 600px;
+}
+.age-caculator form {
+    display: flex;
+    flex-direction: column;
+}
+.age-caculator form button {
+    align-self: flex-end;
+    margin-top: 5px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: hsl(259, 100%, 65%);
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+}
+.age-caculator form button:hover {
+    background-color: hsl(0, 0%, 8%);
+}
+.age-caculator .inputs-container {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+.age-caculator .inputs-container::before {
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 2px;
+    background-color: hsl(0, 0%, 94%);
+    bottom: -40px;
+}
+.age-caculator .inputs-container div {
+    margin-right: 20px;
+}
+.age-caculator .inputs-container div .not-valid {
+    color: hsl(0, 100%, 67%);
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 12px;
+}
+.age-caculator .inputs-container div label {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: hsl(0, 1%, 44%);
+    margin-bottom: -19px;
+    display: block;
+    letter-spacing: 3px;
+}
+.age-caculator .inputs-container div input {
+    width: 130px;
+    padding: 12px 0 12px 20px;
+    font-size: 22px;
+    color: hsl(0, 0%, 8%);
+    font-weight: 800;
+    border-radius: 7px;
+    border: none;
+    border: 1px solid hsl(0, 0%, 94%);
+    outline: none;
+    transition: 0.3s;
+}
+.age-caculator .inputs-container div input::placeholder {
+    color: hsl(0, 1%, 44%);
+}
+.age-caculator .inputs-container div input:focus {
+    border-color: hsl(0, 0%, 8%);
+}
+
+.showed-info h1 {
+    font-size: 60px;
+    margin: 0;
+    font-style: italic;
+}
+.showed-info h1 span {
+    color: hsl(259, 100%, 65%);
+    letter-spacing: 5px;
+}
+
+@media (max-width: 575px) {
+    .age-caculator {
+        width: 400px;
+    }
+    .age-caculator .inputs-container div input {
+        width: 100px;
+    }
+    .age-caculator .inputs-container div {
+        margin-right: 10px;
+    }
+    .age-caculator form button {
+        align-self: center;
+        margin-top: 20px;
+    }
+    .age-caculator .inputs-container::before {
+        bottom: -50px;
+    }
+}
