@@ -113,3 +113,16 @@ body {
         bottom: -50px;
     }
 }
+
+@media (max-width: 400px) {
+    .age-caculator {
+        width: 350px;
+    }
+    .age-caculator .inputs-container div input {
+        width: 90px;
+        padding: 6px 0 6px 3px;
+    }
+    .showed-info h1 {
+        font-size: 40px;
+    }
+}
